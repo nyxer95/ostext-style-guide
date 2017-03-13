@@ -17,7 +17,25 @@ class AbstractDataModel {
   }
 
   setModelData(data) {
-    this.data = data;
+    this.data = data.sort(function(a,b) {
+      var va = a['name'].split(',')[0].split('.');
+      var vb = b['name'].split(',')[0].split('.');
+      for (var i = 0; i < va.length; ++i) {
+        va[i] = Number(va[i]);
+      }
+      for (var i = 0; i < vb.length; ++i) {
+        vb[i] = Number(vb[i]);
+      }
+      if (va[0] > vb[0]) return 1;
+      if (va[0] < vb[0]) return -1;
+      if (va[1] > vb[1]) return 1;
+      if (va[1] < vb[1]) return -1;
+      if (va[2] > vb[2]) return 1;
+      if (va[2] < vb[2]) return -1;
+
+      return 0;
+    });
+    this.trigger('updated');
   }
   setItem(idx, val) {
     this.data[idx] = val;
