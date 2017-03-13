@@ -35,7 +35,7 @@ class AbstractDataModel {
 
       return 0;
     });
-    this.trigger('updated');
+    this.trigger('updated', data);
   }
   setItem(idx, val) {
     this.data[idx] = val;
@@ -54,3 +54,7 @@ class StyleGuideApp {
 }
 
 let app = new StyleGuideApp();
+
+// Clean this up.
+window.riot = riot;
+window.app = app;
