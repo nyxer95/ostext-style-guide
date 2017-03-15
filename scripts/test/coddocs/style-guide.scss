@@ -1,0 +1,64 @@
+/**
+@Section
+  Getting Started
+  =========
+
+  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea.
+  Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber
+  essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci
+  inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes
+  dignissim est te.
+
+  `
+  <div data-type="section">
+   This is a code example.
+  </div>
+  `
+
+  *single asterisks*
+
+  _single underscores_
+
+  **double asterisks**
+
+  __double underscores__
+
+  That's all, folks.
+
+  @Markup
+    @Type highlighted
+    @Source blockquote-raw.html
+  @Markup
+    @Type highlighted
+    @Source blockquote-cooked.html
+  @Markup
+    @Type styled
+    @Source blockquote-cooked.html
+
+  @Number '1.0.0'
+  @Id #section-100
+*/
+
+/**
+@Section
+  Our Process
+  =========
+
+  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea.
+  Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber
+  essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci
+  inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes
+  dignissim est te.
+
+
+  A sub title!
+  ------------
+
+  Markdown is nice.
+
+  @Markup
+    <div>This is a <em>test</em> of the emergency broadcast system...</div>
+    @Type highlighted
+
+  @Number '1.1.0'
+*/
