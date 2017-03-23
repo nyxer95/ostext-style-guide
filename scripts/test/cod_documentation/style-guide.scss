@@ -1,14 +1,9 @@
 /**
 @Section
-  @Name Getting Started
+  Getting Started
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea.
-  Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber
-  essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci
-  inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes
-  dignissim est te.
-
+  Just putting some quick sanity checks for feature breaks in here.
 
   *single asterisks*
 
@@ -17,8 +12,6 @@
   **double asterisks**
 
   __double underscores__
-
-  Markdown is nice.
 
 
   MathML
@@ -70,25 +63,24 @@
   Examples, styled or markup
   ---------
 
-
   `
   <div data-type="section">
-   This is a code example.
+   This is a small code example.
   </div>
   `
 
+  [#blockquote-example-1]
 
-  That's all, folks.
+  [#blockquote-example-2]
 
   @Markup
     @Type highlighted
     @Source blockquote-raw.html
-  @Markup
-    @Type highlighted
-    @Source blockquote-cooked.html
+    @Id #blockquote-example-1
   @Markup
     @Type styled
     @Source blockquote-cooked.html
+    @Id #blockquote-example-2
 
   @Number '1.0.0'
   @Id #section-100
@@ -96,8 +88,23 @@
 
 /**
 @Section
-  @Name Our Process
+  Background
   =========
+
+  OpenStax is a nonprofit textbook publisher based at Rice University, and it’s our mission to improve student access to education. Our first [openly licensed](https://creativecommons.org/licenses/by/4.0/) college textbook was published in 2012, and [our library](https://openstax.org/subjects) has since grown to more than 20 books for college and AP courses used by hundreds of thousands of students.
+
+  Design is directed by an OpenStax team in collaboration with external groups and subject matter experts in their respective fields. Team participants may vary between titles under development.
+
+  @Number '1.1.0'
+*/
+/**
+@Section
+  Our Process
+  =========
+
+  <div class="container-style-1">
+  ![OpenStax Process](assets/img/process-general.png)
+  </div>
 
   Github
   ---------
@@ -108,12 +115,6 @@
 
   Our code repository is available ([privately](#new-collaborators)) at
   <https://github.com/Connexions/oer.exports>.
-
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea.
-  Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber
-  essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci
-  inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes
-  dignissim est te.
 
   New collaborators
   ---------
@@ -193,6 +194,8 @@
   Questions
   ---------
 
+  ![Wut](https://emoji.slack-edge.com/T0F5B5PGQ/confusedparrot/ac2b759d9cf14efb.gif)
+
   If you have any questions about how to use GitHub to track issues related to OpenStax
   textbook development, please contact the Project Manager for OpenStax, Alana Lemay-Gibson,
   at <nxyer@rice.edu>
@@ -201,6 +204,11 @@
   ---------
 
   ![:)](https://emoji.slack-edge.com/T0F5B5PGQ/fiestaparrot/53961a732fb32de3.gif)
+
+  Content servers
+  ---------
+
+  A list of our servers and their purposes is available in our [Textbook Team Servers](https://docs.google.com/document/d/1zuI2a4ddkngxvH0HgnpiHe28c34kPHk4sgzo4aBfzDQ/edit#heading=h.exariqofiypd) document.
 
   Report an issue with a content development staging server.
   ---------
@@ -214,77 +222,134 @@
 
      Cc other members of your team as appropriate.
 
-
-  @Markup
-    <div>This is a <em>test</em> of the emergency broadcast system...</div>
-    @Type highlighted
-
   @Number '1.1.0'
 */
 
 /**
 @Section
-  @Name Limitations
+  Limitations
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  One of our methods of improving access to education is lowering cost, and in our effort to do so we have adopted methods of textbook production which many may find unfamiliar. We rely heavily on technology that provides automated content layout and composition for print. This allows us to quickly change content and style, but it also leads to many unique problems. We will investigate some of those problems in detail.
+
+  A list of GitHub Issues which relate to these platform limitations [is maintained using a status:wontfix label](https://github.com/Connexions/oer.exports/issues?q=label%3Astatus%3Awontfix+is%3Aclosed).
+
+  Page count
+  ---------
+
+  A large factor in textbook cost is the length of the text, and we have made the decision to sacrifice the quality of our layout and composition in order to lower student cost by reducing page count. This means that if a text is too long to print, we will adjust the style to lower the page count -- usually resulting in a lower quality textbook. Vertical space is extremely valuable, and should never be wasted. With regards to breaking this rule, only the most vital pedagogical features will be considered.
+
+  Our hardcover textbooks are limited to 1700 pages. We prefer a page count considerably lower, to increase accessibility and affordability.
+
+  While we acknowledge that white space, or negative space, is an active element in a good design, we have traded manual control of this type of pixel-perfect layout for software algorithms that place content into a paged layout quickly. This means that adding or removing whitespace can be difficult, or impossible, especially where content breaks across pages or where it has been set into multiple columns.
+
+  Column Layouts
+  ---------
+
+  Only specific content, such as collated material, can be organized into columns. The primary body text of each chapter is limited to one column. Markup and instruction will be provided in a tagging legend if a title supports organizing content into a column layout.
+
+  Text wrapping
+  ---------
+
+  Our renderer does not support wrapping text around images.
+
+  Math and scientific notation
+  ---------
+
+  Our publishing platform does not completely support the features of the MathML language. We cannot use colors, certain roots outside the radical, or many features of vertical math. We have  documented [MathML Guidelines](https://drive.google.com/file/d/0B7FBfN1twn-7cnNNems0NjdVRlk/view?ts=589232d3) to help avoid some of these problems or introducing others.
+
+  Page breaking
+  ---------
+
+  * Any kind of forced page breaks should be kept to a minimum. Without the ability to control placement of each piece of content individually, forcing elements such as tables or other varying length content to break will lead to unintended white space on a page and potentially increase page count significantly. Limiting forced page breaks also helps avoid problems if content is reused.
+  * Chapters, appendices, and some collated material will appear after an automatic page break that will force such content to appear on an odd, right hand side, page.
+  * Content is allowed to break within tables unless otherwise specified.
+  * Content is allowed to break inside a feature unless otherwise specified.
+  * Restrictions to natural content breaks may occur in exercises, examples, or other content. End of chapter material might have specific page breaking rules to ensure that exercise titles remain with the exercise problems. Sometimes breaks will be forced so that exercises flow evenly when in columns. These typically depend on the complexity of the layout and/or content.
 
   @Number '1.2.0'
 */
 
 /**
 @Section
-  @Name GENERAL COMPOSITION
+  GENERAL COMPOSITION
   =========
-
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
 
   @Number '2.0.0'
 */
 
 /**
 @Section
-  @Name Color
+  Color
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  OpenStax textbooks are primarily in four subjects Mathematics, Science, Business, and Humanities. We specify four general "themes" that specify the style for our titles in these markets.
+
+  Themes
+  ---------
+
+  ### Mathematics
+
+  ### Science
+
+  ### Business
+
+  ![Business Theme](assets/img/color-business-theme.jpg)
+
+  ### Humanities
+
+
+  Source Art
+  ---------
+
+  Source art should use colors from the primary palette from a specific markets theme.
 
   @Number '2.1.0'
 */
 
 /**
 @Section
-  @Name Typography
+  Typography
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  [A double-stranded scale (Perfect Fifth and Perfect Fourth)](http://www.modularscale.com/?1&em&1.5,1.333&web&text) is used to determine text sizes. Vertical space, padding or margin, will be determined using a method that will ensure that all text is composed in such a way that vertical space is divided into portions equal in height to the product of font size and line height.
+
+  All text will land on a vertical position that is an integer multiple of (base font size * base line height). Base font size, as well as line height, can be changed during production for a number of reasons, the most common being textbook length. Longer titles may require text to have less line height, or a smaller font size. Limiting text sizes to specific ratios, and determining vertical spaces relative to that text size, ensures that we can change text properties in a predicatable way. All vertical spaces will adjust at the same ratios as text sizes change.
+
+  ![OpenStax Typographic Scale](assets/img/typography-chart.png)
 
   @Number '2.2.0'
 */
 
 /**
 @Section
-  @Name Page Layout
+  Page Layout
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  Page dimensions are 8.5 x 11 inches. Top and bottom margins are 0.8 inch, left and right margins are 1 inch.
+
+  __insert graphic demonstrating bleed, trim, crop, and safe marks__
+
+  The page is split into margins, folio (page header and footer), and a content area. Numbers and generated content (such as surrent page number, current chapter title, etc) can appear in the folio areas. An attribution link is automatically added to the footer of all even-numbered pages.
 
   @Number '2.3.0'
 */
 
 /**
 @Section
-  @Name Image Layout
+  Image Layout
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  We support full width, two column, and three column sets of images and figures. The composition rules for images and for problem/solution sets are the same.
+
+  ![](assets/img/imagelayout-rules.jpg))
 
   @Number '2.4.0'
 */
 
 /**
 @Section
-  @Name CONTENT ELEMENTS
+  CONTENT ELEMENTS
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -294,7 +359,7 @@
 
 /**
 @Section
-  @Name Folio
+  Folio
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -304,7 +369,7 @@
 
 /**
 @Section
-  @Name Headers
+  Headers
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -314,7 +379,7 @@
 
 /**
 @Section
-  @Name Paragraphs
+  Paragraphs
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -324,7 +389,7 @@
 
 /**
 @Section
-  @Name Links
+  Links
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -334,7 +399,7 @@
 
 /**
 @Section
-  @Name Figure Captions
+  Figure Captions
   =========
 
   `
@@ -354,7 +419,7 @@
 
 /**
 @Section
-  @Name Lists
+  Lists
   =========
 
 
@@ -377,7 +442,7 @@
 
 /**
 @Section
-  @Name Blockquotes
+  Blockquotes
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -387,7 +452,7 @@
 
 /**
 @Section
-  @Name Dividers
+  Dividers
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -397,7 +462,7 @@
 
 /**
 @Section
-  @Name Footnotes
+  Footnotes
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -407,7 +472,7 @@
 
 /**
 @Section
-  @Name Footer
+  Footer
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -417,7 +482,7 @@
 
 /**
 @Section
-  @Name Images
+  Images
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -427,7 +492,7 @@
 
 /**
 @Section
-  @Name UI Elements
+  UI Elements
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -437,7 +502,7 @@
 
 /**
 @Section
-  @Name Features
+  Features
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -447,7 +512,7 @@
 
 /**
 @Section
-  @Name Tables
+  Tables
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -457,7 +522,7 @@
 
 /**
 @Section
-  @Name Book Map
+  Book Map
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -467,7 +532,7 @@
 
 /**
 @Section
-  @Name Folio (manually added)
+  Folio (manually added)
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -477,7 +542,7 @@
 
 /**
 @Section
-  @Name Headers
+  Headers
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -487,7 +552,7 @@
 
 /**
 @Section
-  @Name Table of Contents
+  Table of Contents
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -497,7 +562,7 @@
 
 /**
 @Section
-  @Name Chapter
+  Chapter
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -507,7 +572,7 @@
 
 /**
 @Section
-  @Name Answer Key
+  Answer Key
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -517,7 +582,7 @@
 
 /**
 @Section
-  @Name References
+  References
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -527,7 +592,7 @@
 
 /**
 @Section
-  @Name Appendix
+  Appendix
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -537,7 +602,7 @@
 
 /**
 @Section
-  @Name Index
+  Index
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
@@ -547,7 +612,7 @@
 
 /**
 @Section
-  @Name Back Matter
+  Back Matter
   =========
 
   Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.

@@ -15,6 +15,10 @@ else:
 
 extensions =  ['.less', '.css', '.sass', '.scss']
 
+markup_blocks = {}
+def add_markup_block(block):
+  markup_blocks[block["Id"]] = block["Source"]
+
 def find_files(paths):
   if isinstance(paths, str): paths = [paths]
   for path in paths:
@@ -64,30 +68,28 @@ A configuration file which consists of the following settings -
   cod_output = subprocess.check_output("cod {}".format(' '.join(file_paths)), shell=True)
   style_guide_json = json.loads(cod_output.decode('utf-8'), object_hook=process_json_markup)
 
-  # # SHIM FOR JSON FORMAT
-  # style_guide_data = []
-  # for _section in style_guide_json["Section"]:
-  #   section = {}
-  #
-  #   section_number = _section['Number']
-  #   if ((section_number.startswith('"') and section_number.endswith('"')) or
-  #       (section_number.startswith("'") and section_number.endswith("'"))):
-  #     section_number = section_number[1:-1]
-  #
-  #   section_title = re.search('<h1>(?P<title>[^<>]*)</h1>', _section['!text'])
-  #   section_title = section_title.group('title') if (section_title) else ' '
-  #
-  #   # Remove <h1>Title</h1> from section text.
-  #   _section['!text'] = re.sub('<h1>[^<>]*</h1>', '', _section['!text'], 1)
-  #
-  #   section['name'] = "{},{}".format(section_number, section_title)
-  #   section['description'] = _section['!text']
-  #   section['raw_html']    = ' '
-  #   section['cooked_html'] = ' '
-  #   section['rule_set']    = ' '
-  #
-  #   style_guide_data.append(section)
-  # # /SHIM FOR JSON FORMAT
+
+  # Parse chunks of markup to be included by reference.
+  for _section in style_guide_json["Section"]:
+    if 'Markup' in _section:
+      _markup_blocks = _section['Markup']
+      if not hasattr(_markup_blocks, '__iter__'):
+        _markup_blocks = [_section['Markup'],]
+
+      for _block in _markup_blocks:
+        if all (_key in _block for _key in ('Id', 'Source')):
+          if os.path.exists("{}/{}".format(config["documentation_path"], _block['Source'])):
+            add_markup_block(_block)
+  for _section in style_guide_json["Section"]:
+    if '!text' in _section:
+      id_match = re.search(r'\[(?P<id>\#[^\[]+)\]', _section['!text'])
+      print("Found match: {}".format(id_match))
+      if id_match:
+        reference_id = id_match.group('id')
+        with open("{}/{}".format(config["documentation_path"],
+                                 markup_blocks[reference_id])) as src:
+          _section['!text'] = re.sub('\[\#[^\[]+\]', src.read(), _section['!text'])
+  print("Markup blocks found: {}".format(markup_blocks))
 
   style_guide_filename = "{}/{}".format(config["style_guide_path"], config["style_guide_data"])
   print("Writing style guide data to {}".format(style_guide_filename))
