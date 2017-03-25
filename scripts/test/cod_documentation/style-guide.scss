@@ -102,9 +102,7 @@
   Our Process
   =========
 
-  <div class="container-style-1">
   ![OpenStax Process](assets/img/process-general.png)
-  </div>
 
   Github
   ---------
@@ -123,18 +121,20 @@
   code and issue management tools, perform the following tasks:
 
   1. If you do not have a GitHub account, create one.
-    * Go to <http://www.github.com/>.
-    * Enter the requested information and click **Sign up for GitHub**.
-  2. Send your GitHub username to Alana Lemay-Gibson <nyxer@rice.edu>, and
-     Alina Slavik <alinams@rice.edu>.
 
-     Our A-team will then setup your access to the Connexions / oer.exports repository.
-     You will receive an invitation email from GitHub with a link to follow to accept
-     access, or you may visit <https://github.com/Connexions> where you can find a link
-     to accept access at the top.
+       * Go to <http://www.github.com/>.
+       * Enter the requested information and click **Sign up for GitHub**.
+
+  2. Send your GitHub username to Alana Lemay-Gibson <nyxer@rice.edu>, and Alina Slavik <alinams@rice.edu>.
+
+       Our A-team will then setup your access to the Connexions / oer.exports repository.
+       You will receive an invitation email from GitHub with a link to follow to accept
+       access, or you may visit <https://github.com/Connexions> where you can find a link
+       to accept access at the top.
+
   3. Visit the OpenStax repository at <https://github.com/Connexions/oer.exports>.
 
-     ![OpenStax repository](assets/img/process-00.png)
+       ![OpenStax repository](assets/img/process-00.png)
 
   Report and track an issue with a textbook template
   ---------
@@ -142,54 +142,57 @@
   To submit an issue for an OpenStax textbook, perform the following tasks:
 
   1. Ensure that you are logged into GitHub:
-    * If you are not logged into GitHub,  the Sign in button displays in the upper,
-    right corner of the page.
-    * If you are logged into GitHub, your username display in the upper, right corner
-    of the page.
+
+       * If you are not logged into GitHub,  the Sign in button displays in the upper, right corner of the page.
+       * If you are logged into GitHub, your username display in the upper, right corner of the page.
+
   2. From the links menu on the top of the page, click **Issues**.
 
-    ![GitHub Issues](assets/img/process-01.png)
+       ![GitHub Issues](assets/img/process-01.png)
+
   3. Click **New Issue**.
 
-    ![New GitHub Issue](assets/img/process-02.png)
+       ![New GitHub Issue](assets/img/process-02.png)
+
   4. To create the issue, enter the following information:
 
-    ![Github Issue Information](assets/img/process-03.png)
+       ![Github Issue Information](assets/img/process-03.png)
 
-    * At **Title**, enter a title for the issue. Please include the name of the
-      textbook in the title, then use a colon and type a summary of the issue, e.g.
-      "Economics: Feature titles 10 pixels too far left".
-    * At **no one is assigned**, click the gear button and select **nyxer95** to assign
-      the issue to the Project Manager.
-    * At **Leave a comment**, enter the following information:
-      1. Rendition in which you encountered the issue, e.g. HTML, PDF, etc.
-      2. Chapter and Module number.
-      3. A detailed (quantitative and qualitative) description of the issue.
-    * At **Add Labels**, click to select a value from all of the following label groups:
-      1. book
-      2. env
-      3. prio
-      4. type
+       * At **Title**, enter a title for the issue. Please include the name of the textbook in the title, then use a colon and type a summary of the issue, e.g. "Economics: Feature titles 10 pixels too far left".
+       * At **no one is assigned**, click the gear button and select **nyxer95** to assign the issue to the Project Manager.
+       * At **Leave a comment**, enter the following information:
 
-      ![Creating an Issue](assets/img/process-04.png)
-    * Locate the screen captures of the issue and drag them into the comment section
-      of the page.
+           1. Rendition in which you encountered the issue, e.g. HTML, PDF, etc.
+           2. Chapter and Module number.
+           3. A detailed (quantitative and qualitative) description of the issue.
 
-      To ensure that your screen captures are inserted properly, click **Preview**.
+       * At **Add Labels**, click to select a value from all of the following label groups:
+           1. book
+           2. env
+           3. prio
+           4. type
 
-      ![Preview an Issue](assets/img/process-05.png)
-    * Click **Submit new issue**
+           ![Creating an Issue](assets/img/process-04.png)
 
-      ![Submitted Issue](assets/img/process-06.png)
+       * Locate the screen captures of the issue and drag them into the comment section of the page.
+
+           To ensure that your screen captures are inserted properly, click **Preview**.
+
+           ![Preview an Issue](assets/img/process-05.png)
+
+       * Click **Submit new issue**
+
+           ![Submitted Issue](assets/img/process-06.png)
 
   To track issues that you submitted, perform the following tasks:
 
   1. Go to <https://github.com/Connexions/oer.exports/issues?state=open>.
+
   2. From **Browse Issues**, click **Created by you**.
 
-     ![Track Issues](assets/img/process-07.png)
-  3. If you want to see only the issues related to a specific book, click one of the
-     book labels.
+       ![Track Issues](assets/img/process-07.png)
+
+  3. If you want to see only the issues related to a specific book, click one of the book labels.
 
   Questions
   ---------
@@ -222,7 +225,7 @@
 
      Cc other members of your team as appropriate.
 
-  @Number '1.1.0'
+  @Number '1.2.0'
 */
 
 /**
@@ -251,7 +254,7 @@
   Text wrapping
   ---------
 
-  Our renderer does not support wrapping text around images.
+  Our platform does not support wrapping text around images.
 
   Math and scientific notation
   ---------
@@ -267,7 +270,7 @@
   * Content is allowed to break inside a feature unless otherwise specified.
   * Restrictions to natural content breaks may occur in exercises, examples, or other content. End of chapter material might have specific page breaking rules to ensure that exercise titles remain with the exercise problems. Sometimes breaks will be forced so that exercises flow evenly when in columns. These typically depend on the complexity of the layout and/or content.
 
-  @Number '1.2.0'
+  @Number '1.3.0'
 */
 
 /**
@@ -283,7 +286,7 @@
   Color
   =========
 
-  OpenStax textbooks are primarily in four subjects Mathematics, Science, Business, and Humanities. We specify four general "themes" that specify the style for our titles in these markets.
+  OpenStax textbooks are primarily in four subjects: Mathematics, Science, Business, and Humanities. There are four general "themes" that specify the style for our titles in these markets.
 
   Themes
   ---------
@@ -314,9 +317,23 @@
 
   [A double-stranded scale (Perfect Fifth and Perfect Fourth)](http://www.modularscale.com/?1&em&1.5,1.333&web&text) is used to determine text sizes. Vertical space, padding or margin, will be determined using a method that will ensure that all text is composed in such a way that vertical space is divided into portions equal in height to the product of font size and line height.
 
-  All text will land on a vertical position that is an integer multiple of (base font size * base line height). Base font size, as well as line height, can be changed during production for a number of reasons, the most common being textbook length. Longer titles may require text to have less line height, or a smaller font size. Limiting text sizes to specific ratios, and determining vertical spaces relative to that text size, ensures that we can change text properties in a predicatable way. All vertical spaces will adjust at the same ratios as text sizes change.
+  All text will land on a vertical position that is an integer multiple of (base font size * base line height). Base font size, as well as line height, can be changed during production for a number of reasons, the most common being textbook length. Longer titles may require text to have less line height, or a smaller font size. Limiting text sizes to specific ratios, and determining vertical spaces relative to that text size, ensures that we can change text properties in a predictable way. All vertical spaces will adjust at the same ratios as text sizes change.
 
   ![OpenStax Typographic Scale](assets/img/typography-chart.png)
+
+  Fonts
+  ---------
+
+  Our books generally use a combination of Noto Sans, Noto Serif, and Dosis.
+
+  - Noto Sans, Noto Serif
+  - Dosis, Noto Sans
+  - Dosis, Noto Serif
+
+  Mathematics
+  ---------
+
+  Mathematics is rendered using [STIX Fonts Project](https://sourceforge.net/projects/stixfonts/) fonts. These fonts are licensed [SIL Open Font License (OFL-1.1)](https://opensource.org/licenses/OFL-1.1).
 
   @Number '2.2.0'
 */
@@ -328,9 +345,9 @@
 
   Page dimensions are 8.5 x 11 inches. Top and bottom margins are 0.8 inch, left and right margins are 1 inch.
 
-  __insert graphic demonstrating bleed, trim, crop, and safe marks__
-
   The page is split into margins, folio (page header and footer), and a content area. Numbers and generated content (such as surrent page number, current chapter title, etc) can appear in the folio areas. An attribution link is automatically added to the footer of all even-numbered pages.
+
+  ![Areas of the page](assets/img/pagelayout-pageareas.jpg)
 
   @Number '2.3.0'
 */
@@ -340,9 +357,9 @@
   Image Layout
   =========
 
-  We support full width, two column, and three column sets of images and figures. The composition rules for images and for problem/solution sets are the same.
+  We support full width, two column, and three column sets of images, figures, and problems/solutions.
 
-  ![](assets/img/imagelayout-rules.jpg))
+  ![](assets/img/imagelayout-rules.jpg)
 
   @Number '2.4.0'
 */
@@ -515,7 +532,7 @@
   Tables
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  ffsdfas
 
   @Number '3.14.0'
 */
