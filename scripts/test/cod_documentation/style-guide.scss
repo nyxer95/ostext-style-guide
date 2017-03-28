@@ -366,273 +366,263 @@
 
 /**
 @Section
-  CONTENT ELEMENTS
+  Content Elements
   =========
-
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
-
-  @Number '3.0.0'
+  
+  @Number '4.0.0'
 */
-
 /**
 @Section
   Folio
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  All OpenStax books have folio text at the top of the page on all pages after the table of contents. This text includes the number and title of the chapter (or Preface, Appendix, or Index) aligned to the inside of the page, opposite the page number. These folios are automatically generated in the pdf and cannot be edited manually.
 
-  @Number '3.1.0'
+  @Number '4.1.0'
 */
-
 /**
 @Section
-  Headers
+  Content Headers
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  OpenStax books use nested headers; they include chapter titles (H1), module titles (H2), inside-module section titles (H3), and further nested section headers (e.g. H4, H5). These header levels can be distinguished from each other by CSS-assigned font size and style.
 
-  @Number '3.2.0'
+  @Number '4.2.0'
 */
-
 /**
 @Section
   Paragraphs
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  Paragraphs cannot be referred or linked to in OpenStax books, nor can they be indented without being enclosed by some other container.
 
-  @Number '3.3.0'
+  @Number '4.3.0'
 */
-
 /**
 @Section
   Links
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  Our books use several types of links, each with different markup requirements:
+     +  external links, which go to a non-OpenStax website (usually with a forwarding shortlink from openstax.org), marked up with <link url="shortlink">anchor text</link>
+     + Intramodule links, which go to an element inside the same module as the link, and are marked up with <link target-id="id of the target element"/> with no anchor text, since the linked feature’s title or number will be automatically generated when the link displays
+     + extramodule links, which go to another module inside the book collection, marked up with <link document="other module number">Module Title anchor text</link> (these links may also go to a specific feature inside the other module, in which case the link markup will include  target-id="id of the target element" inside the link tag, and the link will not require anchor text)
 
-  @Number '3.4.0'
+  @Number '4.4.0'
 */
-
-/**
-@Section
-  Figure Captions
-  =========
-
-  `
-  <figure data-type="figure">
-    <img src="https://emoji.slack-edge.com/T0F5B5PGQ/fiestaparrot/53961a732fb32de3.gif" alt="Textbook team mascot" />
-    <figcaption>Textbook team mascot</figcaption>
-  </figure>
-  `
-
-  <figure data-type="figure">
-    <img src="https://emoji.slack-edge.com/T0F5B5PGQ/fiestaparrot/53961a732fb32de3.gif" alt="Textbook team mascot" />
-    <figcaption>Textbook team mascot</figcaption>
-  </figure>
-
-  @Number '3.5.0'
-*/
-
 /**
 @Section
   Lists
   =========
 
+  Lists may be bulleted, unmarked, stepwise, numbered, alphabetical, or tokened. Certain lists may also be comma-separated and not vertically separated by item.
 
-  `
-  <ul data-type="unordered-list">
-    <li>The presence of sulfate in soil would not make a difference.</li>
-    <li>Soils which contain acid sulfate are rich in iron sulfides.</li>
-    <li>These soils may produce sulphuric acid when disturbed.</li>
-  </ul>
-  `
-
-  <ul data-type="unordered-list">
-    <li>The presence of sulfate in soil would not make a difference.</li>
-    <li>Soils which contain acid sulfate are rich in iron sulfides.</li>
-    <li>These soils may produce sulphuric acid when disturbed.</li>
-  </ul>
-
-  @Number '3.6.0'
+  @Number '4.5.0'
 */
-
 /**
 @Section
   Blockquotes
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  Blockquotes are indented and may have a specified font style, and use the <quote> tag.
 
-  @Number '3.7.0'
+  @Number '4.6.0'
 */
-
 /**
 @Section
   Dividers
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
-
-  @Number '3.8.0'
+  @Number '4.7.0'
 */
-
 /**
 @Section
   Footnotes
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  Numbered footnotes are available in OpenStax books with the `<footnote>` tag, which encloses the text of the footnote and moves it to the bottom of the page on which the tag appears.
 
-  @Number '3.9.0'
+  @Number '4.7.0'
 */
-
 /**
 @Section
   Footer
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  Every even-numbered page of an OpenStax book has an automatically-generated footer stating the book’s free availability and location online.
 
-  @Number '3.10.0'
+  [Footer Image](link to image)
+
+  @Number '4.8.0'
 */
+/**
+@Section
+  Figures
+  =========
 
+  A `<figure>` tag is a container for a media tag, and figures are numbered by default. To remove numbering from a figure, the unnumbered class must be applied in the figure tag (the markup is `<figure class="unnumbered">`), and an empty label tag (`<label/>`) must also be enclosed inside the figure tag. Figures may have captions (the markup `<caption>` goes inside the figure tag), but they are not required.
+
+  @Number '4.9.0'
+*/
 /**
 @Section
   Images
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  + Images must be uploaded to the module they will appear in on the platform, and they show up in the content when referred to by filename in a `<media>` tag:
+       ```
+       <media alt="alt text">
+         <image src="filename.jpg"/>
+       </media>
+       ```
+  + An alt text description of the image is required on each piece of media, for accessibility.
+  + Images are unnumbered by default and do not have a caption, but can be numbered if enclosed by a figure tag.
+  + Image files supported: png (including transparency), svg, jpg, gif
+  + [[target for image sizes from figure] Image can be 3 sizes: ⅓, ½, full width. Exact measurements to be provided at a later date
 
-  @Number '3.11.0'
+  @Number '4.10.0'
 */
-
 /**
 @Section
   UI Elements
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  + Icons
+  + Borders
 
-  @Number '3.12.0'
+  @Number '4.11.0'
 */
-
 /**
 @Section
   Features
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  + Simple features: some features have an automatically-generated feature title (Try It, for example) which is provided by the CSS once a class is applied to the `<note>` tag enclosing the feature.
+  + Subtitled features: some features have an automatically generated feature title as well as manually applied subtitles for each individual feature. These subtitles are sometimes applied in the `<title>` tag of the note, but other times they are text inside a paragraph in the note.
+  + Features may or may not be numbered according to their class.
 
-  @Number '3.13.0'
+  @Number '4.12.0'
 */
+/**
+@Section
+  Examples
+  =========
 
+  + Examples may contain exercises with solutions (an `<exercise>` tag contains a `<problem>` tag and may also contain one or more `<solution>` tags; `<commentary>` is another available child of the `<exercise>` tag). Solutions to exercises inside Examples have automatic numbering corresponding to the Example numbers.
+  + Examples may have subtitles, with either only a visual distinction (bolded manually in a paragraph enclosed inside the example), but the subtitles may also be created by applying specific classes to the `<example>` tag.
+
+  @Number '4.13.0'
+*/
 /**
 @Section
   Tables
   =========
 
-  ffsdfas
+  +  **Basic tables** are are numbered by default. Tables may have a title and/or a caption. The title appears after the table number and before the caption below the table.
+  + To **remove the numbering** from a table, both apply the class="unnumbered" in the `<table>` tag and include an empty label tag (marked up as `<label/>` enclosed by the table tag).
+  + To create a table with a **header row**, include a `<thead>` row before the other rows. Header rows are incompatible with a forced "Title" above a table within the same book.
+  + To create a **forced "Title" above** a table instead the normal table title below it, merge the cells in the header row and put the "Title" in the merged cell. Tables with forced titles above the data can contain a caption, but no `<title>` tag is needed.  These tables can be unnumbered. Forced titles above the data are incompatible with single header rows within the same book.
+  + To create a **forced "Title" above a table _with_ a header row**, use two `<thead>` rows, with the first one's cells merged. These tables can contain a caption, but no `<title>` tag is needed. Two-thead tables are incompatible with double-header-row tables within the same book.
+  + To create a table with **two header rows**, use two `<thead>` rows, unmerged. These tables may have a caption and a title. They are incompatible with tables that have both forced "Title" rows above them and a header row, within the same book.
+  + **Unstyled** tables use the class "unstyled" in conjunction with the class "unnumbered" (the markup is `<table class="unnumbered unstyled">`). These have no borders or styling and are aligned left by default.
+  + To create a **column header** in a table, use the class "column-header" on the `<table>` tag.
+  + To create **"header" rows inside a table**, merge the cells in the row and bold the text in the markup for the merged cell. More styling, such as colored text or colored background of the cells, is not supported by the platform.
 
-  @Number '3.14.0'
+  @Number '4.14.0'
 */
-
 /**
 @Section
-  Book Map
+  Skelebook (default book map)
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
-
-  @Number '4.0.0'
+  @Number '5.0.0'
 */
-
 /**
 @Section
-  Folio (manually added)
+  Front Matter (manually added)
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
-
-  @Number '4.1.0'
+  @Number '5.1.0'
 */
-
 /**
 @Section
-  Headers
+  Preface
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  The `<document>` tag of a preface must contain the preface class: `<document class="preface">`.
 
-  @Number '4.2.0'
+  @Number '5.2.0'
 */
-
 /**
 @Section
   Table of Contents
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  The platform automatically generates a table of contents; it cannot be edited manually.
 
-  @Number '4.3.0'
+  @Number '5.3.0'
 */
-
 /**
 @Section
   Chapter
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  ###Modules###
+  Each chapter contains an introduction module. This module must use the class "introduction" (not "intro", which is a common markup mistake) in the document tag: `<document class="introduction">`. A chapter also contains one or more other modules. These are contained in a subcollection inside the collection structure. Modules may contain any available CNXML content.
 
-  @Number '4.4.0'
+  ###Splash image###
+  At the beginning of each chapter in the introduction module, a figure with the splash class (markup: `<figure class="splash">` may cover the horizontal width of the page.
+
+  ###Chapter outline###
+  The platform generates a chapter outline for each chapter in the collection.
+
+  ###Learning Objectives (not in every book)###
+  At the beginning of each chapter, and also at the beginning of each module, learning objectives are defined in the content, using a section with the class learning-objectives (the beginning of the module is marked up this way: `<section class="learning-objectives">`, with a bulleted list of objectives inside the section tag).
+
+  ###End-of-Chapter Collated Elements###
++ Collating elements are created by adding a specific class to a `<section>` tag at the end of a module (these elements must always appear in the same order in the module markup). Collating elements common to most OpenStax books include Section Summary (class="section-summary"), Key Terms (class="key-terms"), Key Concepts (class="concepts"), Key Equations, various types of problems and exercises (often separated in collation by type). More flexible book-specific collated elements sometimes include Practice Tests and References [link to References](insert link).
++ Collating elements are usually located inside the relevant modules and collated together at the end of the chapter, using a collation instruction in the introduction module of each chapter. The collated elements may be separated by headers indicating the module they came from, or they may not, according to their class.
+
+  @Number '5.3.1'
 */
-
 /**
 @Section
   Answer Key
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  + The Answer Key has exercise solutions that are separated by chapter in the back of the book.
+  + Collation instructions for the Answer Key are included in the Introduction module of every chapter. There are two options; one will move any solutions inside the matched section to the end of chapter and add a copy of that to the answer key. Another will COPY any solutions inside the matched section to the answer key, also leaving it in place in the chapter.
 
-  @Number '4.5.0'
+  @Number '5.4.0'
 */
-
 /**
 @Section
-  References
+  References (not in every book)
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  + May appear at the end of section, chapter, or book.
+  + If displaying at the end of a book, they cannot be sorted at the book-level.
 
-  @Number '4.6.0'
+  @Number '5.5.0'
 */
-
 /**
 @Section
-  Appendix
+  Appendix(es)
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  + Appendixes are titled with alpha numbering (instead of the arabic numeral default of the rest of the book),  and all numbered elements inside (tables, figures)
+  + The document tag must contain the class "appendix".
+  + The folio displays usual page numbers and appendix titles (Appendix A for example) instead of chapter title.
+  + The appendix styling is similar to the rest of the book.
 
-  @Number '4.7.0'
+  @Number '5.6.0'
 */
-
 /**
 @Section
   Index
   =========
 
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
+  + Index terms are based on how they are referenced in the text and can only contain one word, e.g. “bank” and “banks” would be separate entries. An entry for “Clinton”, 2, 5, 25, 178 could refer to either Bill or Hillary.
 
-  @Number '4.8.0'
-*/
-
-/**
-@Section
-  Back Matter
-  =========
-
-  Lorem ipsum dolor sit amet, est ex dolore assueverit, nisl esse eum ad, nec sint assum ea. Vidit soleat no mea. Iusto tation mediocrem mea id, te forensibus appellantur eos, liber essent vituperatoribus ei pri. Nam offendit inciderint delicatissimi at, eum ne graeci inimicus. Eu nec error numquam probatus, nisl aeterno persecuti cu eum, magna nonumes dignissim est te.
-
-  @Number '4.9.0'
+  @Number '5.7.0'
 */
